@@ -1,0 +1,15 @@
+<!--#include("./_header.html")-->
+<load target="js/config.js" />
+
+<div cond="$XE_VALIDATOR_MESSAGE" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+    <p>{$XE_VALIDATOR_MESSAGE}</p>
+</div>
+
+<form class="x_form-horizontal" action="./" method="post" id="lotto">
+	<input type="hidden" name="module" value="lotto" />
+	<input type="hidden" name="act" value="procLottoAdminConfigChange" />
+
+  <div class="x_clearfix btnArea">
+    <button type="submit" class="x_btn x_btn-primary x_pull-right">저장</button>
+  </div>
+</form>

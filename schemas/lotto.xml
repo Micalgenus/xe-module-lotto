@@ -1,0 +1,7 @@
+<table name="lotto">
+  <column name="lotto_srl" type="number" size="11" notnull="notnull" auto_increment="auto_increment" primary_key="primary_key" />
+  <column name="module_srl" type="number" size="11" notnull="notnull" />
+  <column name="title" type="varchar" size="80" notnull="notnull" />
+  <column name="description" type="text" />
+  <column name="config" type="text" />
+</table>

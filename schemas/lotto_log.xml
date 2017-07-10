@@ -1,0 +1,7 @@
+<table name="lotto_log">
+  <column name="log_srl" type="number" size="11" notnull="notnull" auto_increment="auto_increment" primary_key="primary_key" />
+  <column name="lotto_srl" type="number" size="11" notnull="notnull" />
+  <column name="member_srl" type="number" size="11" notnull="notnull" />
+  <column name="date" type="date" notnull="notnull" />
+  <column name="content" type="text" notnull="notnull" />
+</table>

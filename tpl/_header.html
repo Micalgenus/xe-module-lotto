@@ -1,0 +1,8 @@
+
+<div class="x_page-header">
+	<h1>{$lang->lotto} {$lang->cmd_management}</h1>
+</div>
+<ul class="x_nav x_nav-tabs" cond="$module=='admin'">
+	<li class="x_active"|cond="$act=='dispLottoAdminConfig'"><a href="{getUrl('act','dispLottoAdminConfig')}">{$lang->default_setting}</a></li>
+	<li class="x_active"|cond="$act=='dispLottoAdminModules'"><a href="{getUrl('act','dispLottoAdminModules')}">{$lang->modules_setting}</a></li>
+</ul>

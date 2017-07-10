@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <actions>
+    <!-- User View -->
+    <action name="dispLottoBuy" type="view" index="true" />
+
+    <!-- Admin View -->
+    <action name="dispLottoAdminConfig" type="view" admin_index="true" />
+    <action name="dispLottoAdminModules" type="view" />
+
+    <!-- Admin Action -->
+    <action name="procLottoAdminConfigChange" type="controller" />
+  </actions>
+</module>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="lotto">
+		<value xml:lang="ko"><![CDATA[포인트 로또]]></value>
+	</item>
+  <item name="modules_setting">
+    <value xml:lang="ko"><![CDATA[모듈별 설정]]></value>
+  </item>
+  <item name="module_select">
+    <value xml:lang="ko"><![CDATA[모듈 선택]]></value>
+  </item>
+  <item name="msg_lotto_exist">
+    <value xml:lang="ko"><![CDATA[개 로또가 존재합니다.]]></value>
+  </item>
+  <item name="lotto_title">
+    <value xml:lang="ko"><![CDATA[로또 제목]]></value>
+  </item>
+  <item name="lotto_sub_option">
+    <value xml:lang="ko"><![CDATA[로또 추가 옵션]]></value>
+  </item>
+  <item name="module_select_please">
+    <value xml:lang="ko"><![CDATA[모듈은 선택해 주시길 바랍니다.]]></value>
+  </item>
+</lang>

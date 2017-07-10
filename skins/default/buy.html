@@ -1,0 +1,59 @@
+<load target="css/buy.css" />
+<load target="js/buy.js" />
+<script>
+  alertMsg("{$XE_VALIDATOR_MESSAGE}");
+</script>
+
+<div id="lotto">
+  <!--@if($lotto_list)-->
+    <ul class="nav">
+      {@ $i = 0 }
+      <li loop="$lotto_list => $l">
+        <!--@if($l->title == $lotto || (!$lotto && $i++ == 0))-->
+          {@ $selected = $l }
+        <!--@end-->
+        <a
+          class="selected"|cond="$l == $selected"
+          href="{getUrl('mid', $module_info->mid, 'lotto', $l->title)}">
+            {$l->title}
+        </a>
+      </li>
+    </ul>
+
+    {@ $point = $selected->point }
+    {@ $myPoint = $logged_info->point }
+    {@ $des = $selected->description }
+    {@ $config = json_decode($selected->config) }
+    {@ $oLottoModel = &getModel('lotto') }
+
+    <dl class="left_box">
+      <dt>현재 포인트</dt>
+      <dd>{number_format($myPoint)} point</dd>
+
+      <dt>가격</dt>
+      <dd>{number_format($oLottoModel->percentToPoint($point, $myPoint))} point</dd>
+
+      <dt>설명</dt>
+      <dd><p>{$des}</p></dd>
+    </dl>
+
+
+    <ul class="point_list">
+      {@ $i = 1; }
+      <li loop="$config => $c">
+        {$i++}등 <!--({$c->percent}%) -->- {number_format($oLottoModel->percentToPoint($c->compensate, $myPoint))} point
+      </li>
+      <!--@if($i == 1)-->
+        <li>복권 정보가 없습니다.</li>
+      <!--@end-->
+    </ul>
+    
+    <form method="post" class="x_form-horizontal">
+      <input type="hidden" name="lotto_srl" value="{$selected->lotto_srl}" />
+      <input type="hidden" name="act" value="procLottoBuy" />
+      <span class="x_pull-right"><input class="x_btn x_btn-primary buy_btn" type="submit" value="구매" /></span>
+    </form>
+  <!--@else-->
+    로또 목록이 없습니다.
+  <!--@end-->
+</div>
